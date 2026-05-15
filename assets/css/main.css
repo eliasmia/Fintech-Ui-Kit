@@ -1,0 +1,27 @@
+/* ============================================================
+   DEMO SHOWCASE — Page Styles
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Onest:wght@500;600;700&family=Caveat:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-general);
+  background: var(--color-bg-base);
+  color: var(--color-black-inverse);
+  min-height: 100vh;
+  transition: background var(--transition-slow), color var(--transition-slow);
+}
