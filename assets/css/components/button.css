@@ -22,13 +22,6 @@
    - States control interaction behavior
    - Toggles control layout structure (icons/text)
    ============================================================ */
-   /* ============================================================
-   BUTTON COMPONENT
-   Variants: data-variant="primary|secondary|ghost|danger|success|outline"
-   Sizes:    data-size="xs|sm|md|lg|xl"
-   States:   disabled, data-loading
-   Toggles:  data-icon-left, data-icon-right, data-icon-only
-   ============================================================ */
 
 /* Btn Structure */
 .btn {
@@ -192,22 +185,22 @@
 }
 
 /* —— Icon toggles —— */
-.btn .btn__icon {
+.btn .btn_icon {
   display: none;
   width: 1em;
   height: 1em;
   flex-shrink: 0;
 }
 
-.btn[data-icon-left] .btn__icon--left,
-.btn[data-icon-right] .btn__icon--right,
-.btn[data-icon-only] .btn__icon--only {
+.btn[data-icon-left] .btn_icon-left,
+.btn[data-icon-right] .btn_icon-right,
+.btn[data-icon-only] .btn_icon-only {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.btn[data-icon-only] .btn__label {
+.btn[data-icon-only] .btn_label {
   display: none;
 }
 

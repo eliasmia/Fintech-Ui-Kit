@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="assets/css/json-tokens.css">
     <!-- Components Styles -->
   <link rel="stylesheet" href="assets/css/components/button.css">
+  <link rel="stylesheet" href="assets/css/components/input.css">
 
     <!-- Main Styling -->
   <link rel="stylesheet" href="assets/css/main.css">
@@ -479,19 +480,91 @@
                 <div class="block_label">Icons</div>
                 <div class="btn-row" style="margin-bottom: var(--sp-4xs);">
                   <button class="btn" data-variant="outline" data-icon-only>
-                    <svg class="btn__icon btn__icon--only" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                    <svg class="btn_icon btn_icon-only" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
                   </button>
                   <button class="btn" data-variant="primary" data-icon-left>
-                    <svg class="btn__icon btn__icon--left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    <span class="btn__label">Icon Left</span>
+                    <svg class="btn_icon btn_icon-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <span class="btn_label">Icon Left</span>
                   </button>
                   <button class="btn" data-variant="secondary" data-icon-right>
-                    <span class="btn__label">Icon Right</span>
-                    <svg class="btn__icon btn__icon--right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <span class="btn_label">Icon Right</span>
+                    <svg class="btn_icon btn_icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </button>
               
                 </div>
               </div>
+
+           </div>
+        </section>
+
+       <!-- ==========================================
+            inputs Section
+        ========================================== -->
+        <section id="inputs" class="component-section">
+           <h2 class="section_title">Inputs</h2>
+   
+           <div class="component-card border" style="margin-bottom: var(--sp-3xs); padding-bottom: 0; max-width: 800px;">
+              <div class="component-block"> 
+                <div class="block_label">Variants</div>
+                <div class="input-col" style="margin-bottom: var(--sp-4xs);">
+
+                 <div class="input-group">
+                  <label class="input-group__label">Default Input</label>
+                  <div class="input-wrap">
+                    <input type="text" class="input" placeholder="Type here...">
+                  </div>
+                 </div>
+
+                <div class="input-group">
+                  <label class="input-group__label">Filled Input</label>
+                  <div class="input-wrap">
+                    <input type="text" class="input" data-variant="filled" placeholder="Type here...">
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label class="input-group__label">Flushed Input</label>
+                  <div class="input-wrap">
+                    <input type="text" class="input" data-variant="flushed" placeholder="Type here...">
+                  </div>
+                </div>
+                  
+                </div>
+              </div>
+
+              <div class="component-block"> 
+                <div class="block_label">States</div>
+                <div class="input-col" style="margin-bottom: var(--sp-4xs);">
+
+                  <div class="input-group" data-error>
+                  <label class="input-group__label">Error State</label>
+                  <div class="input-wrap" data-icon-right>
+                    <input type="text" class="input" value="Invalid email">
+                    <svg class="input-wrap__icon input-wrap__icon--right" style="color: var(--color-accent-danger)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  </div>
+                  <span class="input-group__hint">Please enter a valid email address.</span>
+                </div>
+                
+                <div class="input-group" data-success>
+                  <label class="input-group__label">Success State</label>
+                  <div class="input-wrap" data-icon-right>
+                    <input type="text" class="input" value="user@domain.com">
+                    <svg class="input-wrap__icon input-wrap__icon--right" style="color: var(--color-accent-success)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  </div>
+                  <span class="input-group__hint">Email is available!</span>
+                </div>
+
+                <div class="input-group">
+                  <label class="input-group__label">Icons Left</label>
+                  <div class="input-wrap" data-icon-left>
+                    <svg class="input-wrap__icon input-wrap__icon--left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" class="input" placeholder="Search...">
+                  </div>
+                </div>
+                  
+                </div>
+              </div>
+
 
            </div>
         </section>

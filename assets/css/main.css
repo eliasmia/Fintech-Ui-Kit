@@ -252,9 +252,11 @@ ul {
     flex-wrap: wrap;
     align-items: center;
     gap: var(--sp-4xs);
-    margin-bottom: ;
+    margin-bottom: var(--sp-3xs);
 }
-
+.input-col .input-group{
+    margin-bottom: var(--sp-3xs);
+}
 /* ============================================================
      Responsive Styles
    ============================================================ */

@@ -1,0 +1,169 @@
+/* ============================================================
+   INPUT COMPONENT
+   variants: default | filled | flushed
+   sizes: sm | md | lg
+
+   states: disabled | readonly | error | success
+
+   addons: icon-left | icon-right | clearable
+============================================================ */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-9xs);
+  width: 100%;
+}
+
+.input-group__label {
+  font-family: var(--font-general);
+  font-size: var(--fs-caption-m);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-caption-m);
+  color: var(--color-black-inverse);
+}
+
+.input-group__hint {
+  font-family: var(--font-general);
+  font-size: var(--fs-caption-s);
+  line-height: var(--lh-caption-s);
+  color: var(--color-gray-regular);
+}
+
+.input-group[data-error] .input-group__hint {
+  color: var(--color-accent-danger);
+}
+.input-group[data-success] .input-group__hint {
+  color: var(--color-accent-success);
+}
+
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  font-family: var(--font-general);
+  font-weight: var(--fw-regular);
+  color: var(--color-black-inverse);
+  background: var(--color-bg-base);
+  border: var(--bw-3xs) solid var(--color-gray-medium);
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.input::placeholder {
+  color: var(--color-gray-regular);
+}
+
+/* —— Sizes —— */
+.input,
+.input[data-size="md"] {
+  padding: 10px var(--sp-7xs);
+  font-size: var(--fs-body-s);
+  line-height: var(--lh-body-s);
+  border-radius: var(--radius-m);
+  min-height: 40px;
+}
+.input[data-size="sm"] {
+  padding: 6px var(--sp-8xs);
+  font-size: var(--fs-caption-m);
+  line-height: var(--lh-caption-m);
+  border-radius: var(--radius-s);
+  min-height: 32px;
+}
+.input[data-size="lg"] {
+  padding: 14px var(--sp-6xs);
+  font-size: var(--fs-body-m);
+  line-height: var(--lh-body-m);
+  border-radius: var(--radius-m);
+  min-height: 48px;
+}
+
+/* —— Variants —— */
+/* Default is above */
+
+/* Filled */
+.input[data-variant="filled"] {
+  background: var(--color-bg-ultra-thin);
+  border-color: transparent;
+}
+.input[data-variant="filled"]:hover {
+  background: var(--color-bg-thin);
+}
+
+/* Flushed */
+.input[data-variant="flushed"] {
+  border-radius: 0;
+  border: none;
+  border-bottom: var(--bw-2xs) solid var(--color-gray-medium);
+  padding-inline: 0;
+  background: transparent;
+}
+
+/* —— Focus —— */
+.input:focus {
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 3px var(--color-accent-primary-a20);
+}
+.input[data-variant="flushed"]:focus {
+  border-bottom-color: var(--color-accent-primary);
+  box-shadow: none;
+}
+
+/* —— Error / Success —— */
+.input-group[data-error] .input,
+.input[data-error] {
+  border-color: var(--color-accent-danger);
+}
+.input-group[data-error] .input:focus,
+.input[data-error]:focus {
+  box-shadow: 0 0 0 3px var(--color-accent-danger-a20);
+}
+
+.input-group[data-success] .input,
+.input[data-success] {
+  border-color: var(--color-accent-success);
+}
+.input-group[data-success] .input:focus,
+.input[data-success]:focus {
+  box-shadow: 0 0 0 3px var(--color-accent-success-a20);
+}
+
+/* —— Disabled —— */
+.input:disabled,
+.input[disabled] {
+  opacity: var(--opacity-disabled);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* —— Icon Slots —— */
+.input-wrap__icon {
+  position: absolute;
+  display: none;
+  width: 18px;
+  height: 18px;
+  color: var(--color-gray-regular);
+  pointer-events: none;
+}
+.input-wrap[data-icon-left] .input-wrap__icon--left {
+  display: flex;
+  left: 12px;
+}
+.input-wrap[data-icon-left] .input {
+  padding-left: 36px;
+}
+
+.input-wrap[data-icon-right] .input-wrap__icon--right {
+  display: flex;
+  right: 12px;
+}
+.input-wrap[data-icon-right] .input {
+  padding-right: 36px;
+}
