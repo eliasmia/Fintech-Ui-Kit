@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fintech UI Kit</title>
+    <!-- Tokens & Globals css -->
+  <link rel="stylesheet" href="assets/css/json-tokens.css">
+    <!-- Main Styling -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+     <!---- Start Sidebar ---->
+     <div class="sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-logo">
+            <svg viewBox="0 0 61 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M60.4341 0L50.658 17.1822H11.2573L20.7372 0H60.4341Z" fill="#1E33EE"/>
+              <path d="M20.7372 34.6609L11.2573 17.1824H30.8095L20.7372 34.6609Z" fill="#071BD0"/>
+              <path d="M50.3617 23.1072L40.5856 40.2894H0L9.47985 23.1072H50.3617Z" fill="#1E33EE"/>
+              <path d="M9.47986 57.7678L0 40.2893H19.5522L9.47986 57.7678Z" fill="#071BD0"/>
+            </svg>
+         </div>
+          <h1>Fintech UI Kit</h1>
+          <span data-variant="primary">v1.0.0</span>
+        </div>
+        <p>Your all-in-one design system for building beautiful fintech applications.</p>
+        <div class="sidebar-menu">
+          <h3>Design Tokens</h3>
+          <ul>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#spacing">Spacing & Radius</a></li>
+          </ul>
+          <h3>Components</h3>
+          <ul>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#inputs">Inputs</a></li>
+            <li><a href="#badges">Badges</a></li>
+            <li><a href="#toggles">Toggles</a></li>
+            <li><a href="#checkboxes">Checkboxes</a></li>
+            <li><a href="#radios">Radios</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#content-details">Content Details</a></li>
+            <li><a href="#progress-alerts">Progress & Alerts</a></li>
+          </ul>
+
+        </div>
+        <div class="sidebar-footer">
+          <p>&copy; 2024 Fintech UI Kit. All rights reserved.</p>
+        </div>
+
+     </div>
+     <!-- ==========================================
+        Start main content
+      ========================================== -->
+     <div class="main-content">
+        <header class="header">
+         <div class="header-title">Component Showcase</div>
+         <div class="header-actions"></div>
+       </header>
+
+       <div class="content-inner">
+        <!-- ==========================================
+            COLORS Section
+        ========================================== -->
+        <section id="colors" class="component-section">
+           <h2 class="section_title">Colors</h2>
+           <p class="section_description">Core semantic and accent colors with automatic Light and Dark theme support.</p>
+   
+           <div class="component-card border" style="margin-bottom: var(--sp-3xs); padding-bottom: 0;">
+              <div class="component-block"> 
+                <div class="block_label">Accent Primary</div>
+                <div class="swatch-row">
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary);"></div>
+                    <div class="swatch-name">Primary</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a60);"></div>
+                    <div class="swatch-name">Primary a60</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a40);"></div>
+                    <div class="swatch-name">Primary a40</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a20);"></div>
+                    <div class="swatch-name">Primary a20</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a8);"></div>
+                    <div class="swatch-name">Primary a8</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a0);"></div>
+                    <div class="swatch-name">Primary a0</div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="component-block">
+                <div class="block_label">Accent Success</div>
+                <div class="swatch-row">
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success);"></div>
+                    <div class="swatch-name">Success</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success-a60);"></div>
+                    <div class="swatch-name">Success a60</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success-a40);"></div>
+                    <div class="swatch-name">Success a40</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success-a20);"></div>
+                    <div class="swatch-name">Success a20</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success-a8);"></div>
+                    <div class="swatch-name">Success a8</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success-a0);"></div>
+                    <div class="swatch-name">Success a0</div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="component-block">
+                <div class="block_label">Accent Danger</div>
+                <div class="swatch-row">
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger);"></div>
+                    <div class="swatch-name">Danger</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a60);"></div>
+                    <div class="swatch-name">Danger a60</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a40);"></div>
+                    <div class="swatch-name">Danger a40</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a20);"></div>
+                    <div class="swatch-name">Danger a20</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a8);"></div>
+                    <div class="swatch-name">Danger a8</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a0);"></div>
+                    <div class="swatch-name">Danger a0</div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="component-block">
+                <p>Backgrounds & Surfaces</p>
+                <div class="swatch-row">
+                  <div class="swatch">
+                    <div class="swatch-color" style="background: var(--color-bg-base);border: 1px solid var(--color-gray-ultra);"></div>
+                    <div class="swatch-name">Bg Base</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-bg-ultra-thin);"></div>
+                    <div class="swatch-name">Bg Ultra Thin</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-bg-ultra-thin);"></div>
+                    <div class="swatch-name">Bg Ultra Thin</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-bg-regular);"></div>
+                    <div class="swatch-name">Bg Regular</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var( --color-bg-medium);"></div>
+                    <div class="swatch-name">Bg medium</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var( --color-bg-medium-a0);"></div>
+                    <div class="swatch-name">Bg Medium</div>
+                  </div>
+
+                  </div>
+              </div>
+
+              <div class="component-block">
+                <p>Text</p>
+                <div class="swatch-row">
+                  <div class="swatch">
+                    <div class="swatch-color" style="background: var(--color-black-inverse);border: 1px solid var(--color-gray-ultra);"></div>
+                    <div class="swatch-name">Black Inverse</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-black-inverse-a80);"></div>
+                    <div class="swatch-name">Black Inverse a80</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-black-inverse-a60);"></div>
+                    <div class="swatch-name">Black Inverse a60</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-black-inverse-a40);"></div>
+                    <div class="swatch-name">Black Inverse a40</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var( --color-black-inverse-a20);"></div>
+                    <div class="swatch-name">Black Inverse a20</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var( --color-black-inverse-a12);"></div>
+                    <div class="swatch-name">Black Inverse a12</div>
+                  </div>
+                  </div>
+
+              </div>
+           </div>
+        </section>
+
+        <!-- ==========================================
+            Typography Section
+        ========================================== -->
+         <section id="typography" class="component-section">
+           <h2 class="section_title" style="margin-bottom: var(--sp-6xs);">Typography</h2>
+            <div class="type-row border" style="margin-bottom: var(--sp-3xs); padding-bottom: 0;">
+                  <div class="type-sample" style="padding-top: 0;">
+                    <div class="type-sample_text" style="font-size: var(--fs-display-l); line-height: var(--lh-display-l); font-weight: var(--fw-bold);">Display L</div>
+                    <div class="type-sample_meta">80px / 88px Line Height / Bold</div>
+                  </div>
+
+                  <div class="type-sample">
+                    <div class="type-sample_text" style="font-size: var(--fs-display-m); line-height: var(--lh-display-m); font-weight: var(--fw-bold);">Display M</div>
+                    <div class="type-sample_meta">64px / 72px Line Height / Bold</div>
+                  </div>
+
+                  <div class="type-sample">
+                    <div class="type-sample_text" style="font-size: var(--fs-display-s); line-height: var(--lh-display-s); font-weight: var(--fw-bold);">Display S</div>
+                    <div class="type-sample_meta">48px / 56px Line Height / Bold</div>
+                  </div>
+
+                  <div class="type-sample">
+                    <div class="type-sample_text" style="font-size: var(--fs-title-l); line-height: var(--lh-title-l); font-weight: var(--fw-semibold);">Title Large</div>
+                    <div class="type-sample_meta">40px / 48px Line Height / SemiBold</div>
+                 </div>
+
+                  <div class="type-sample">
+                    <div class="type-sample_text" style="font-size: var(--fs-title-m); line-height: var(--lh-title-m); font-weight: var(--fw-semibold);">Title Medium </div>
+                    <div class="type-sample_meta">24px / 32px Line Height / SemiBold</div>
+                 </div>
+
+                  <div class="type-sample">
+                    <div class="type-sample_text" style="font-size: var(--fs-title-s); line-height: var(--lh-title-s); font-weight: var(--fw-semibold);">Title Small</div>
+                    <div class="type-sample_meta">24px / 32px Line Height / SemiBold</div>
+                  </div>
+
+                  <div class="type-sample">
+                    <div class="type-sample_text" style="font-size: var(--fs-body-l); line-height: var(--lh-body-l); font-weight: var(--fw-regular);">Body Large — The quick brown fox jumps over the lazy dog.</div>
+                    <div class="type-sample_meta">18px / 24px Line Height / Regular</div>
+                  </div>
+
+                  <div class="type-sample">
+                    <div class="type-sample_text" style="font-size: var(--fs-body-m); line-height: var(--lh-body-m); font-weight: var(--fw-regular);">Body Medium — The quick brown fox jumps over the lazy dog.</div>
+                    <div class="type-sample_meta">16px / 22px Line Height / Regular</div>
+                  </div>
+
+                  <div class="type-sample">
+                    <div class="type-sample_text" style="font-size: var(--fs-body-s); line-height: var(--lh-body-s); font-weight: var(--fw-regular);">Body Small — The quick brown fox jumps over the lazy dog.</div>
+                    <div class="type-sample_meta">14px / 20px Line Height / Regular</div>
+                  </div>
+
+                  <div class="type-sample">
+                    <div class="type-sample_text" style="font-size: var(--fs-caption-m); line-height: var(--lh-caption-m); font-weight: var(--fw-regular);">Caption Medium — The quick brown fox jumps over the lazy dog.</div>
+                    <div class="type-sample_meta">13px / 18px Line Height / Regular</div>
+                  </div>
+                            
+                  <div class="type-sample">
+                    <div class="type-sample_text" style="font-size: var(--fs-caption-s); line-height: var(--lh-caption-s); font-weight: var(--fw-regular);">Caption Small — The quick brown fox jumps over the lazy dog.</div>
+                    <div class="type-sample_meta">12px / 16px Line Height / Regular</div>
+                  </div>
+                     
+                </div>
+        </section>
+
+        <!-- ==========================================
+            Spacing & Radius Section 
+        ========================================== -->
+         <section id="spacing" class="component-section">
+           <h2 class="section_title" style="margin-bottom: var(--sp-6xs);">Spacing & Radius</h2>
+           <div class="border" style="margin-bottom: var(--sp-3xs); padding-bottom: 0;">
+            <div class="block_label">Spacing</div>
+            <div class="spacing-row" style=" display: flex; align-items: flex-end;gap: var(--sp-4xs); padding-bottom: var(--sp-3xs);">
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-8xs</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-8xs); height: var(--sp-8xs); border-radius: var(--radius-3xs);"></div>
+                    <div style="font-size: var(--fs-caption-m);">8px</div>
+                </div>
+
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-12xs</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-7xs); height: var(--sp-7xs); border-radius: var(--radius-3xs);"></div>
+                    <div style="font-size: var(--fs-caption-m);">12px</div>
+                </div>
+                
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-16xs</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-6xs); height: var(--sp-6xs); border-radius: var(--radius-3xs);"></div>
+                    <div style="font-size: var(--fs-caption-m);">16px</div>
+                </div>
+
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-20xs</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-5xs); height: var(--sp-5xs); border-radius: var(--radius-3xs);"></div>
+                    <div style="font-size: var(--fs-caption-m);">20px</div>
+                </div>
+
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-24xs</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-4xs); height: var(--sp-4xs); border-radius: var(--radius-3xs);"></div>
+                    <div style="font-size: var(--fs-caption-m);">24px</div>
+                </div>
+
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-32xs</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-3xs); height: var(--sp-3xs); border-radius: var(--radius-3xs);"></div>
+                    <div style="font-size: var(--fs-caption-m);">32px</div>
+                </div>
+                
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-40xs</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-2xs); height: var(--sp-2xs); border-radius: var(--radius-3xs);"></div>
+                    <div style="font-size: var(--fs-caption-m);">32px</div>
+                </div>
+                
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-48xs</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-xs); height: var(--sp-xs); border-radius: var(--radius-3xs);"></div>
+                    <div style="font-size: var(--fs-caption-m);">48px</div>
+                </div>
+                
+            </div>
+           </div>
+
+           <div class="border" style="margin-bottom: var(--sp-3xs); padding-bottom: 0;">
+            <div class="block_label">Radius</div>
+            <div class="spacing-row" style=" display: flex; align-items: flex-end;gap: var(--sp-4xs); padding-bottom: var(--sp-3xs);">
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--radius-s</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-xs); height: var(--sp-xs); border-radius: var(--radius-3xs);"></div>
+                    <div style="font-size: var(--fs-caption-m);">8px</div>
+                </div>
+
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--radius-m</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-xs); height: var(--sp-xs); border-radius: var(--radius-m);"></div>
+                    <div style="font-size: var(--fs-caption-m);">12px</div>
+                </div>
+                
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--radius-l</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-xs); height: var(--sp-xs); border-radius: var(--radius-l);"></div>
+                    <div style="font-size: var(--fs-caption-m);">16px</div>
+                </div>
+
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--radius-xl</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-xs); height: var(--sp-xs); border-radius: var(--radius-xl);"></div>
+                    <div style="font-size: var(--fs-caption-m);">20px</div>
+                </div>
+
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--radius-2xl</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-xs); height: var(--sp-xs); border-radius: var(--radius-2xl);"></div>
+                    <div style="font-size: var(--fs-caption-m);">24px</div>
+                </div>
+
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--radius-3xl</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-xs); height: var(--sp-xs); border-radius: var(--radius-3xl);"></div>
+                    <div style="font-size: var(--fs-caption-m);">32px</div>
+                </div>
+
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--radius-4xl</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-xs); height: var(--sp-xs); border-radius: var(--radius-4xl);"></div>
+                    <div style="font-size: var(--fs-caption-m);">48px</div>
+                </div>
+
+                 <div style="display: inline-flex; align-items: center; gap: var(--sp-8xs); flex-direction: column;">
+                    <div style="text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--radius-full</div>
+                     <div style="background: var(--color-purple-a60); width: var(--sp-xs); height: var(--sp-xs); border-radius: var(--radius-full);"></div>
+                    <div style="font-size: var(--fs-caption-m);">9999px</div>
+                </div>
+
+
+            </div>
+           </div>
+        </section>
+
+       <!-- ==========================================
+            Buttons Section
+        ========================================== -->
+        <section id="buttons" class="component-section">
+           <h2 class="section_title">Buttons</h2>
+           <p class="section_description">A flexible button component with multiple variants and size options.</p>
+   
+           <div class="component-card border" style="margin-bottom: var(--sp-3xs); padding-bottom: 0;">
+              <div class="component-block"> 
+                <div class="block_label">Accent Primary</div>
+                <div class="swatch-row">
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary);"></div>
+                    <div class="swatch-name">Primary</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a60);"></div>
+                    <div class="swatch-name">Primary a60</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a40);"></div>
+                    <div class="swatch-name">Primary a40</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a20);"></div>
+                    <div class="swatch-name">Primary a20</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a8);"></div>
+                    <div class="swatch-name">Primary a8</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a0);"></div>
+                    <div class="swatch-name">Primary a0</div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="component-block">
+                <div class="block_label">Accent Success</div>
+                <div class="swatch-row">
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success);"></div>
+                    <div class="swatch-name">Success</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success-a60);"></div>
+                    <div class="swatch-name">Success a60</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success-a40);"></div>
+                    <div class="swatch-name">Success a40</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success-a20);"></div>
+                    <div class="swatch-name">Success a20</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success-a8);"></div>
+                    <div class="swatch-name">Success a8</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-success-a0);"></div>
+                    <div class="swatch-name">Success a0</div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="component-block">
+                <div class="block_label">Accent Danger</div>
+                <div class="swatch-row">
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger);"></div>
+                    <div class="swatch-name">Danger</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a60);"></div>
+                    <div class="swatch-name">Danger a60</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a40);"></div>
+                    <div class="swatch-name">Danger a40</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a20);"></div>
+                    <div class="swatch-name">Danger a20</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a8);"></div>
+                    <div class="swatch-name">Danger a8</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a0);"></div>
+                    <div class="swatch-name">Danger a0</div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="component-block">
+                <p>Backgrounds & Surfaces</p>
+                <div class="swatch-row">
+                  <div class="swatch">
+                    <div class="swatch-color" style="background: var(--color-bg-base);border: 1px solid var(--color-gray-ultra);"></div>
+                    <div class="swatch-name">Bg Base</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-bg-ultra-thin);"></div>
+                    <div class="swatch-name">Bg Ultra Thin</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-bg-ultra-thin);"></div>
+                    <div class="swatch-name">Bg Ultra Thin</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-bg-regular);"></div>
+                    <div class="swatch-name">Bg Regular</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var( --color-bg-medium);"></div>
+                    <div class="swatch-name">Bg medium</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var( --color-bg-medium-a0);"></div>
+                    <div class="swatch-name">Bg Medium</div>
+                  </div>
+
+                  </div>
+              </div>
+
+              <div class="component-block">
+                <p>Text</p>
+                <div class="swatch-row">
+                  <div class="swatch">
+                    <div class="swatch-color" style="background: var(--color-black-inverse);border: 1px solid var(--color-gray-ultra);"></div>
+                    <div class="swatch-name">Black Inverse</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-black-inverse-a80);"></div>
+                    <div class="swatch-name">Black Inverse a80</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-black-inverse-a60);"></div>
+                    <div class="swatch-name">Black Inverse a60</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var(--color-black-inverse-a40);"></div>
+                    <div class="swatch-name">Black Inverse a40</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var( --color-black-inverse-a20);"></div>
+                    <div class="swatch-name">Black Inverse a20</div>
+                  </div>
+
+                  <div class="swatch">
+                    <div class="swatch-color" style="background-color: var( --color-black-inverse-a12);"></div>
+                    <div class="swatch-name">Black Inverse a12</div>
+                  </div>
+                  </div>
+
+              </div>
+           </div>
+        </section>
+
+      
+        </div>
+
+      </div>
+      <!---- End main content ---->
+
+</body>
+</html>
+
+
