@@ -1,0 +1,253 @@
+/* ============================================================
+   BUTTON COMPONENT
+
+   Variants
+   - data-variant="primary | secondary | ghost | danger | success | outline"
+
+   Sizes
+   - data-size="xs | sm | md | lg | xl"
+
+   States
+   - disabled
+   - data-loading
+
+   Toggles
+   - data-icon-left
+   - data-icon-right
+   - data-icon-only
+
+   Notes
+   - Use a single base button component for all variants
+   - Variants control visual styling only
+   - States control interaction behavior
+   - Toggles control layout structure (icons/text)
+   ============================================================ */
+   /* ============================================================
+   BUTTON COMPONENT
+   Variants: data-variant="primary|secondary|ghost|danger|success|outline"
+   Sizes:    data-size="xs|sm|md|lg|xl"
+   States:   disabled, data-loading
+   Toggles:  data-icon-left, data-icon-right, data-icon-only
+   ============================================================ */
+
+/* Btn Structure */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-8xs);
+  border: var(--bw-3xs) solid transparent;
+  cursor: pointer;
+  font-family: var(--font-general);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  outline: none;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    opacity var(--transition-fast),
+    transform 80ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* —— Btn Sizes —— */
+.btn,
+.btn[data-size="md"] {
+  padding: 10px var(--sp-6xs);
+  font-size: var(--fs-body-s);
+  line-height: var(--lh-body-s);
+  border-radius: var(--radius-m);
+  min-height: 40px;
+}
+
+.btn[data-size="xs"] {
+  padding: 4px var(--sp-8xs);
+  font-size: var(--fs-caption-s);
+  line-height: var(--lh-caption-s);
+  border-radius: var(--radius-s);
+  min-height: 28px;
+  gap: var(--sp-10xs);
+}
+
+.btn[data-size="sm"] {
+  padding: 6px var(--sp-7xs);
+  font-size: var(--fs-caption-m);
+  line-height: var(--lh-caption-m);
+  border-radius: var(--radius-s);
+  min-height: 32px;
+  gap: var(--sp-9xs);
+}
+
+.btn[data-size="lg"] {
+  padding: 12px var(--sp-5xs);
+  font-size: var(--fs-body-m);
+  line-height: var(--lh-body-m);
+  border-radius: var(--radius-m);
+  min-height: 48px;
+}
+
+.btn[data-size="xl"] {
+  padding: 16px var(--sp-4xs);
+  font-size: var(--fs-body-l);
+  line-height: var(--lh-body-l);
+  border-radius: var(--radius-l);
+  min-height: 56px;
+}
+
+/* —— Btn Variants —— */
+
+/* Primary Btn */
+.btn,
+.btn[data-variant="primary"] {
+  background: var(--color-accent-primary);
+  color: var(--color-white-base);
+  border-color: var(--color-accent-primary);
+}
+.btn:hover,
+.btn[data-variant="primary"]:hover {
+  background: color-mix(in srgb, var(--color-accent-primary) 85%, #000);
+  border-color: color-mix(in srgb, var(--color-accent-primary) 85%, #000);
+}
+.btn:active,
+.btn[data-variant="primary"]:active {
+  transform: scale(0.97);
+}
+.btn:focus-visible,
+.btn[data-variant="primary"]:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-accent-primary-a40);
+}
+
+/* Secondary Btn */
+.btn[data-variant="secondary"] {
+  background: var(--color-bg-ultra-thin);
+  color: var(--color-black-inverse);
+  border-color: var(--color-bg-ultra-thin);
+}
+.btn[data-variant="secondary"]:hover {
+  background: var(--color-bg-thin);
+  border-color: var(--color-bg-thin);
+}
+.btn[data-variant="secondary"]:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-black-inverse-a20);
+}
+
+/* Ghost Btn */
+.btn[data-variant="ghost"] {
+  background: transparent;
+  color: var(--color-black-inverse);
+  border-color: transparent;
+}
+.btn[data-variant="ghost"]:hover {
+  background: var(--color-black-inverse-a8);
+}
+.btn[data-variant="ghost"]:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-black-inverse-a20);
+}
+
+/* Outline Btn */
+.btn[data-variant="outline"] {
+  background: transparent;
+  color: var(--color-black-inverse);
+  border-color: var(--color-gray-medium);
+}
+.btn[data-variant="outline"]:hover {
+  background: var(--color-black-inverse-a6);
+  border-color: var(--color-gray-normal);
+}
+.btn[data-variant="outline"]:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-black-inverse-a20);
+}
+
+/* Danger Btn */
+.btn[data-variant="danger"] {
+  background: var(--color-accent-danger);
+  color: #fff;
+  border-color: var(--color-accent-danger);
+}
+.btn[data-variant="danger"]:hover {
+  background: color-mix(in srgb, var(--color-accent-danger) 85%, #000);
+  border-color: color-mix(in srgb, var(--color-accent-danger) 85%, #000);
+}
+.btn[data-variant="danger"]:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-accent-danger-a40);
+}
+
+/* Success Btn */
+.btn[data-variant="success"] {
+  background: var(--color-accent-success);
+  color: #fff;
+  border-color: var(--color-accent-success);
+}
+.btn[data-variant="success"]:hover {
+  background: color-mix(in srgb, var(--color-accent-success) 85%, #000);
+  border-color: color-mix(in srgb, var(--color-accent-success) 85%, #000);
+}
+.btn[data-variant="success"]:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-accent-success-a40);
+}
+
+/* —— Icon toggles —— */
+.btn .btn__icon {
+  display: none;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.btn[data-icon-left] .btn__icon--left,
+.btn[data-icon-right] .btn__icon--right,
+.btn[data-icon-only] .btn__icon--only {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn[data-icon-only] .btn__label {
+  display: none;
+}
+
+.btn[data-icon-only] {
+  padding-inline: 0;
+  aspect-ratio: 1;
+}
+
+/* —— Disabled —— */
+.btn:disabled,
+.btn[disabled] {
+  opacity: var(--opacity-disabled);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* —— Loading —— */
+.btn[data-loading] {
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.btn[data-loading]::after {
+  content: "";
+  position: absolute;
+  width: 1.1em;
+  height: 1.1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: btn-spin 600ms linear infinite;
+}
+.btn[data-variant="primary"][data-loading]::after,
+.btn[data-variant="danger"][data-loading]::after,
+.btn[data-variant="success"][data-loading]::after {
+  border-color: rgba(255,255,255,0.4);
+  border-right-color: transparent;
+}
+
+
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}

@@ -6,6 +6,9 @@
   <title>Fintech UI Kit</title>
     <!-- Tokens & Globals css -->
   <link rel="stylesheet" href="assets/css/json-tokens.css">
+    <!-- Components Styles -->
+  <link rel="stylesheet" href="assets/css/components/button.css">
+
     <!-- Main Styling -->
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -440,184 +443,56 @@
    
            <div class="component-card border" style="margin-bottom: var(--sp-3xs); padding-bottom: 0;">
               <div class="component-block"> 
-                <div class="block_label">Accent Primary</div>
-                <div class="swatch-row">
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-primary);"></div>
-                    <div class="swatch-name">Primary</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a60);"></div>
-                    <div class="swatch-name">Primary a60</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a40);"></div>
-                    <div class="swatch-name">Primary a40</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a20);"></div>
-                    <div class="swatch-name">Primary a20</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a8);"></div>
-                    <div class="swatch-name">Primary a8</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-primary-a0);"></div>
-                    <div class="swatch-name">Primary a0</div>
-                  </div>
-
+                <div class="block_label">Variants</div>
+                <div class="btn-row" style="margin-bottom: var(--sp-4xs);">
+                    <button class="btn" data-variant="primary">Primary</button>
+                    <button class="btn" data-variant="secondary">Secondary</button>
+                    <button class="btn" data-variant="outline">Outline</button>
+                    <button class="btn" data-variant="ghost">Ghost</button>
+                    <button class="btn" data-variant="danger">Danger</button>
+                    <button class="btn" data-variant="success">Success</button>
                 </div>
               </div>
 
-              <div class="component-block">
-                <div class="block_label">Accent Success</div>
-                <div class="swatch-row">
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-success);"></div>
-                    <div class="swatch-name">Success</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-success-a60);"></div>
-                    <div class="swatch-name">Success a60</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-success-a40);"></div>
-                    <div class="swatch-name">Success a40</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-success-a20);"></div>
-                    <div class="swatch-name">Success a20</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-success-a8);"></div>
-                    <div class="swatch-name">Success a8</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-success-a0);"></div>
-                    <div class="swatch-name">Success a0</div>
-                  </div>
-
+              <div class="component-block"> 
+                <div class="block_label">Sizes (Primary)</div>
+                <div class="btn-row" style="margin-bottom: var(--sp-4xs);">
+                    <button class="btn" data-variant="primary" data-size="xs">X-Small</button>
+                    <button class="btn" data-variant="primary" data-size="sm">Small</button>
+                    <button class="btn" data-variant="primary" data-size="md">Medium</button>
+                    <button class="btn" data-variant="primary" data-size="lg">Large</button>
+                    <button class="btn" data-variant="primary" data-size="xl">X-Large</button>
                 </div>
               </div>
 
-              <div class="component-block">
-                <div class="block_label">Accent Danger</div>
-                <div class="swatch-row">
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-danger);"></div>
-                    <div class="swatch-name">Danger</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a60);"></div>
-                    <div class="swatch-name">Danger a60</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a40);"></div>
-                    <div class="swatch-name">Danger a40</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a20);"></div>
-                    <div class="swatch-name">Danger a20</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a8);"></div>
-                    <div class="swatch-name">Danger a8</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-accent-danger-a0);"></div>
-                    <div class="swatch-name">Danger a0</div>
-                  </div>
-
+              <div class="component-block"> 
+                <div class="block_label">States & Loading</div>
+                <div class="btn-row" style="margin-bottom: var(--sp-4xs);">
+                  <button class="btn" data-variant="primary" disabled>Disabled Pri</button>
+                  <button class="btn" data-variant="outline" disabled>Disabled Out</button>
+                  <button class="btn" data-variant="primary" data-loading="true">Loading</button>
+                  <button class="btn" data-variant="danger" data-loading="true">Loading</button>
                 </div>
               </div>
 
-              <div class="component-block">
-                <p>Backgrounds & Surfaces</p>
-                <div class="swatch-row">
-                  <div class="swatch">
-                    <div class="swatch-color" style="background: var(--color-bg-base);border: 1px solid var(--color-gray-ultra);"></div>
-                    <div class="swatch-name">Bg Base</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-bg-ultra-thin);"></div>
-                    <div class="swatch-name">Bg Ultra Thin</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-bg-ultra-thin);"></div>
-                    <div class="swatch-name">Bg Ultra Thin</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-bg-regular);"></div>
-                    <div class="swatch-name">Bg Regular</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var( --color-bg-medium);"></div>
-                    <div class="swatch-name">Bg medium</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var( --color-bg-medium-a0);"></div>
-                    <div class="swatch-name">Bg Medium</div>
-                  </div>
-
-                  </div>
+              <div class="component-block"> 
+                <div class="block_label">Icons</div>
+                <div class="btn-row" style="margin-bottom: var(--sp-4xs);">
+                  <button class="btn" data-variant="outline" data-icon-only>
+                    <svg class="btn__icon btn__icon--only" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                  </button>
+                  <button class="btn" data-variant="primary" data-icon-left>
+                    <svg class="btn__icon btn__icon--left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <span class="btn__label">Icon Left</span>
+                  </button>
+                  <button class="btn" data-variant="secondary" data-icon-right>
+                    <span class="btn__label">Icon Right</span>
+                    <svg class="btn__icon btn__icon--right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+              
+                </div>
               </div>
 
-              <div class="component-block">
-                <p>Text</p>
-                <div class="swatch-row">
-                  <div class="swatch">
-                    <div class="swatch-color" style="background: var(--color-black-inverse);border: 1px solid var(--color-gray-ultra);"></div>
-                    <div class="swatch-name">Black Inverse</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-black-inverse-a80);"></div>
-                    <div class="swatch-name">Black Inverse a80</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-black-inverse-a60);"></div>
-                    <div class="swatch-name">Black Inverse a60</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var(--color-black-inverse-a40);"></div>
-                    <div class="swatch-name">Black Inverse a40</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var( --color-black-inverse-a20);"></div>
-                    <div class="swatch-name">Black Inverse a20</div>
-                  </div>
-
-                  <div class="swatch">
-                    <div class="swatch-color" style="background-color: var( --color-black-inverse-a12);"></div>
-                    <div class="swatch-name">Black Inverse a12</div>
-                  </div>
-                  </div>
-
-              </div>
            </div>
         </section>
 

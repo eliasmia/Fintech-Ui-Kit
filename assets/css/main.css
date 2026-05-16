@@ -247,6 +247,14 @@ ul {
     font-size: var(--fs-caption-s);
     color: var(--color-gray-regular);
 }
+.btn-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--sp-4xs);
+    margin-bottom: ;
+}
+
 /* ============================================================
      Responsive Styles
    ============================================================ */
