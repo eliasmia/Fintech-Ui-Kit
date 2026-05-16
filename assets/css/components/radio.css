@@ -1,0 +1,120 @@
+/* ============================================================
+ RADIO COMPONENT
+   sizes: sm | md | lg
+
+   states: disabled | checked
+ ============================================================ */
+ 
+.radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-8xs);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.radio_input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.radio_circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--bw-2xs) solid var(--color-gray-medium);
+  border-radius: 50%;
+  background: transparent;
+  flex-shrink: 0;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.radio_dot {
+  border-radius: 50%;
+  background: #fff;
+  transform: scale(0);
+  transition: transform var(--transition-fast);
+}
+
+.radio_label {
+  font-family: var(--font-general);
+  font-weight: var(--fw-regular);
+  color: var(--color-black-inverse);
+}
+
+/* —— Sizes —— */
+.radio[data-size="sm"] .radio_circle,
+.radio:not([data-size]) .radio_circle {
+  width: 16px;
+  height: 16px;
+}
+.radio[data-size="sm"] .radio_dot,
+.radio:not([data-size]) .radio_dot {
+  width: 6px;
+  height: 6px;
+}
+.radio[data-size="sm"] .radio_label,
+.radio:not([data-size]) .radio_label {
+  font-size: var(--fs-caption-m);
+  line-height: var(--lh-caption-m);
+}
+
+.radio[data-size="md"] .radio_circle {
+  width: 20px;
+  height: 20px;
+}
+.radio[data-size="md"] .radio_dot {
+  width: 8px;
+  height: 8px;
+}
+.radio[data-size="md"] .radio_label {
+  font-size: var(--fs-body-s);
+  line-height: var(--lh-body-s);
+}
+
+.radio[data-size="lg"] .radio_circle {
+  width: 24px;
+  height: 24px;
+}
+.radio[data-size="lg"] .radio_dot {
+  width: 10px;
+  height: 10px;
+}
+.radio[data-size="lg"] .radio_label {
+  font-size: var(--fs-body-m);
+  line-height: var(--lh-body-m);
+}
+
+/* —— Checked —— */
+.radio_input:checked + .radio_circle {
+  background: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+}
+.radio_input:checked + .radio_circle .radio_dot {
+  transform: scale(1);
+}
+
+/* —— Hover —— */
+.radio:hover .radio_circle {
+  border-color: var(--color-accent-primary-a60);
+}
+
+/* —— Focus —— */
+.radio_input:focus-visible + .radio_circle {
+  box-shadow: 0 0 0 3px var(--color-accent-primary-a40);
+}
+
+/* —— Disabled —— */
+.radio:has(.radio_input:disabled) {
+  opacity: var(--opacity-disabled);
+  pointer-events: none;
+  cursor: not-allowed;
+}

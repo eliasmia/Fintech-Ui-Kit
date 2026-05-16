@@ -9,6 +9,11 @@
     <!-- Components Styles -->
   <link rel="stylesheet" href="assets/css/components/button.css">
   <link rel="stylesheet" href="assets/css/components/input.css">
+  <link rel="stylesheet" href="assets/css/components/badge.css">
+  <link rel="stylesheet" href="assets/css/components/toggle.css">
+  <link rel="stylesheet" href="assets/css/components/checkbox.css">
+  <link rel="stylesheet" href="assets/css/components/radio.css">
+  <link rel="stylesheet" href="assets/css/components/extras.css">
 
     <!-- Main Styling -->
   <link rel="stylesheet" href="assets/css/main.css">
@@ -45,9 +50,7 @@
             <li><a href="#toggles">Toggles</a></li>
             <li><a href="#checkboxes">Checkboxes</a></li>
             <li><a href="#radios">Radios</a></li>
-            <li><a href="#cards">Cards</a></li>
-            <li><a href="#content-details">Content Details</a></li>
-            <li><a href="#progress-alerts">Progress & Alerts</a></li>
+            <li><a href="#extras">Progress & Alerts</a></li>
           </ul>
 
         </div>
@@ -62,7 +65,24 @@
      <div class="main-content">
         <header class="header">
          <div class="header-title">Component Showcase</div>
-         <div class="header-actions"></div>
+         <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+              <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+         </div>
        </header>
 
        <div class="content-inner">
@@ -569,12 +589,247 @@
            </div>
         </section>
 
+       <!-- ==========================================
+            Badges Section
+        ========================================== -->
+        <section id="badges" class="component-section">
+           <h2 class="section_title">Badges</h2>
+   
+           <div class="component-card border" style="margin-bottom: var(--sp-3xs); padding-bottom: 0; max-width: 800px;">
+              <div class="component-block"> 
+                <div class="block_label">Variants</div>
+                <div class="input-col badge-col" style="margin-bottom: var(--sp-4xs);">
+                    <span class="badge" data-variant="default">Default</span>
+                    <span class="badge" data-variant="primary">Primary</span>
+                    <span class="badge" data-variant="success">Success</span>
+                    <span class="badge" data-variant="danger">Danger</span>
+                    <span class="badge" data-variant="warning">Warning</span>
+                    <span class="badge" data-variant="outline">Outline</span> 
+                </div>
+              </div>
+
+              <div class="component-block"> 
+                <div class="block_label">Sizes & Options</div>
+                <div class="input-col badge-col" style="margin-bottom: var(--sp-4xs);">
+
+                <span class="badge" data-variant="primary" data-size="sm">Small</span>
+                <span class="badge" data-variant="primary" data-size="md">Medium</span>
+                <span class="badge" data-variant="primary" data-size="lg">Large</span>
+                
+                <!-- Dot -->
+                <span class="badge" data-variant="success" data-dot>
+                  <span class="badge_dot"></span> Active
+                </span>
+                
+                <!-- Icon -->
+                <span class="badge" data-variant="warning" data-icon>
+                  <svg class="badge_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  Warning
+                </span>
+
+                <!-- Removable -->
+                <span class="badge" data-variant="primary" data-removable>
+                  Removable
+                  <button class="badge_remove">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  </button>
+                </span>
+                </div>
+              </div>
+
+           </div>
+        </section>
+
+       <!-- ==========================================
+            Badges Section
+        ========================================== -->
+        <section id="form" class="component-section">
+           <h2 class="section_title">Toggles Checkboxes & Radios</h2>
+   
+           <div id="toggles" class="component-card border"  style="margin-bottom: var(--sp-3xs); padding-bottom: 0; max-width: 800px;">
+              <div class="component-block"> 
+                <div class="block_label">Toggles</div>
+                <div class="input-col btn-row" style="margin-bottom: var(--sp-4xs);">
+                  <label class="toggle" data-size="sm">
+                    <input type="checkbox" class="toggle_input">
+                    <div class="toggle_track"><div class="toggle_thumb"></div></div>
+                    <span class="toggle_label">Small</span>
+                  </label>
+
+                  <label class="toggle" data-size="md">
+                    <input type="checkbox" class="toggle_input" checked>
+                    <div class="toggle_track"><div class="toggle_thumb"></div></div>
+                    <span class="toggle_label">Medium</span>
+                  </label>
+
+                  <label class="toggle" data-size="lg">
+                    <input type="checkbox" class="toggle_input">
+                    <div class="toggle_track"><div class="toggle_thumb"></div></div>
+                    <span class="toggle_label">Large</span>
+                  </label>
+                  
+                  <label class="toggle" data-size="md">
+                    <input type="checkbox" class="toggle_input" checked disabled>
+                    <div class="toggle_track"><div class="toggle_thumb"></div></div>
+                    <span class="toggle_label">Disabled</span>
+                  </label>
+                    
+                </div>
+              </div>
+
+              <div id="checkboxes"  class="component-block"> 
+                <div class="block_label">Checkboxes</div>
+                <div class="input-col badge-col btn-row" style="margin-bottom: var(--sp-4xs);">
+
+                  <label class="checkbox" data-size="sm">
+                  <input type="checkbox" class="checkbox_input">
+                  <div class="checkbox_box">
+                    <svg class="checkbox_icon checkbox_icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span class="checkbox_label">Small</span>
+                </label>
+
+                <label class="checkbox" data-size="md">
+                  <input type="checkbox" class="checkbox_input" checked>
+                  <div class="checkbox_box">
+                    <svg class="checkbox_icon checkbox_icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span class="checkbox_label">Medium</span>
+                </label>
+                
+                <label class="checkbox" data-size="md">
+                  <input type="checkbox" class="checkbox_input" id="indet-checkbox">
+                  <div class="checkbox_box">
+                    <svg class="checkbox_icon checkbox_icon--check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <svg class="checkbox_icon checkbox_icon--minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="display:none"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                  <span class="checkbox_label">Indeterminate</span>
+                </label>
+
+                <label class="checkbox" data-size="lg">
+                  <input type="checkbox" class="checkbox_input" checked disabled>
+                  <div class="checkbox_box">
+                    <svg class="checkbox_icon checkbox_icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span class="checkbox_label">Disabled</span>
+                </label>
+                
+                </div>
+              </div>
+
+              <div id="radios" class="component-block"> 
+                <div class="block_label">Radios</div>
+                <div class="input-col badge-col btn-row" style="margin-bottom: var(--sp-4xs);">
+                  <label class="radio" data-size="sm">
+                    <input type="radio" name="r1" class="radio_input">
+                    <div class="radio_circle"><div class="radio_dot"></div></div>
+                    <span class="radio_label">Small</span>
+                  </label>
+
+                  <label class="radio" data-size="md">
+                    <input type="radio" name="r1" class="radio_input" checked>
+                    <div class="radio_circle"><div class="radio_dot"></div></div>
+                    <span class="radio_label">Medium</span>
+                  </label>
+
+                  <label class="radio" data-size="lg">
+                    <input type="radio" name="r1" class="radio_input">
+                    <div class="radio_circle"><div class="radio_dot"></div></div>
+                    <span class="radio_label">Large</span>
+                  </label>
+
+                  <label class="radio" data-size="md">
+                    <input type="radio" name="r2" class="radio_input" checked disabled>
+                    <div class="radio_circle"><div class="radio_dot"></div></div>
+                    <span class="radio_label">Disabled</span>
+                  </label>
+                
+                </div>
+              </div>
+
+           </div>
+        </section>
+
+       <!-- ==========================================
+            Badges Section
+        ========================================== -->
+        <section id="extras" class="component-section">
+           <h2 class="section_title">Extras</h2>
+   
+           <div id="extras" class="component-card border"  style="margin-bottom: var(--sp-3xs); padding-bottom: 0; max-width: 800px;">
+              <div class="component-block"> 
+                <div class="block_label">Alerts</div>
+                <div class="input-col alert-row" style="margin-bottom: var(--sp-4xs);">
+                    <div class="alert" data-variant="info" data-icon>
+                      <div class="alert_icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                      </div>
+                      <div class="alert_content">
+                        <div class="alert_title">System Update Available</div>
+                        <div class="alert_description">A new version is ready to be installed.</div>
+                      </div>
+                    </div>
+
+                    <div class="alert" data-variant="warning" data-icon data-dismissible>
+                      <div class="alert_icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                      </div>
+                      <div class="alert_content">
+                        <div class="alert_title">Payment Method Expiring</div>
+                        <div class="alert_description">Your card ending in 4242 will expire soon.</div>
+                      </div>
+                      <button class="alert_dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+                    </div>
+
+                    <div class="alert" data-variant="danger" data-icon>
+                      <div class="alert_icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                      </div>
+                      <div class="alert_content">
+                        <div class="alert_title">Failed to saving changes</div>
+                        <div class="alert_description">Please check your connection and try again.</div>
+                      </div>
+                    </div>
+                    
+                </div>
+              </div>
+
+              <div id="checkboxes"  class="component-block"> 
+                <div class="block_label" style="margin-bottom: var(--sp-4xs);">Progress Bars</div>
+                <div class="btn-row" style="margin-bottom: var(--sp-4xs);">
+                  <div class="progress" data-size="sm">
+                  <div class="progress_track">
+                    <div class="progress_fill" style="width: 45%;"></div>
+                  </div>
+                </div>
+
+                <div class="progress" data-size="md" data-label data-variant="success">
+                  <div class="progress_header">
+                    <span class="progress_label">Storage Used</span>
+                    <span class="progress_value">70%</span>
+                  </div>
+                  <div class="progress_track">
+                    <div class="progress_fill" style="width: 70%;"></div>
+                  </div>
+                </div>
+
+                <div class="progress" data-size="lg" data-variant="warning" data-striped data-animated>
+                  <div class="progress_track">
+                    <div class="progress_fill" style="width: 100%;"></div>
+                  </div>
+                </div>
+                  
+                </div>
+              </div>
+
+           </div>
+        </section>
+
       
         </div>
-
       </div>
       <!---- End main content ---->
-
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>
 

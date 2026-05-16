@@ -1,0 +1,191 @@
+/* ============================================================
+   ALERT COMPONENT
+   variants: info | success | warning | danger
+
+   addons: dismissible | icon
+============================================================ */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-7xs);
+  padding: var(--sp-7xs) var(--sp-6xs);
+  border-radius: var(--radius-m);
+  font-family: var(--font-general);
+  border: var(--bw-3xs) solid transparent;
+  transition: opacity var(--transition-normal);
+}
+
+.alert_icon {
+  display: none;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+}
+.alert[data-icon] .alert_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-10xs);
+}
+
+.alert_title {
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-body-s);
+}
+
+.alert_description {
+  font-size: var(--fs-caption-m);
+  line-height: var(--lh-caption-m);
+  opacity: 0.8;
+}
+
+.alert_dismiss {
+  display: none;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--radius-2xs);
+  color: currentColor;
+  opacity: 0.5;
+  transition: opacity var(--transition-fast);
+}
+.alert_dismiss:hover {
+  opacity: 1;
+}
+.alert[data-dismissible] .alert_dismiss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* —— Alert Variants —— */
+.alert,
+.alert[data-variant="info"] {
+  background: var(--color-accent-primary-a8);
+  color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary-a20);
+}
+.alert[data-variant="success"] {
+  background: var(--color-accent-success-a8);
+  color: var(--color-accent-success);
+  border-color: var(--color-accent-success-a20);
+}
+.alert[data-variant="warning"] {
+  background: var(--color-accent-warning-a8);
+  color: var(--color-accent-warning);
+  border-color: var(--color-accent-warning-a20);
+}
+.alert[data-variant="danger"] {
+  background: var(--color-accent-danger-a8);
+  color: var(--color-accent-danger);
+  border-color: var(--color-accent-danger-a20);
+}
+
+
+/* ============================================================
+   PROGRESS BAR COMPONENT
+   variants: default | success | danger | warning
+   sizes: sm | md | lg
+
+   addons: animated | striped | label
+============================================================ */
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-10xs);
+  width: 100%;
+}
+
+.progress_header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.progress[data-label] .progress_header {
+  display: flex;
+}
+
+.progress_label {
+  font-family: var(--font-general);
+  font-size: var(--fs-caption-m);
+  font-weight: var(--fw-medium);
+  color: var(--color-black-inverse);
+  line-height: var(--lh-caption-m);
+}
+
+.progress_value {
+  font-family: var(--font-general);
+  font-size: var(--fs-caption-s);
+  color: var(--color-gray-regular);
+  line-height: var(--lh-caption-s);
+}
+
+.progress_track {
+  width: 100%;
+  background: var(--color-bg-ultra-thin);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress_fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* —— Sizes —— */
+.progress[data-size="sm"] .progress_track { height: 4px; }
+.progress .progress_track,
+.progress[data-size="md"] .progress_track { height: 8px; }
+.progress[data-size="lg"] .progress_track { height: 12px; }
+
+/* —— Variants —— */
+.progress .progress_fill,
+.progress[data-variant="default"] .progress_fill {
+  background: var(--color-accent-primary);
+}
+.progress[data-variant="success"] .progress_fill {
+  background: var(--color-accent-success);
+}
+.progress[data-variant="danger"] .progress_fill {
+  background: var(--color-accent-danger);
+}
+.progress[data-variant="warning"] .progress_fill {
+  background: var(--color-accent-warning);
+}
+
+/* —— Striped —— */
+.progress[data-striped] .progress_fill {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255,255,255,0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0.15) 75%,
+    transparent 75%
+  );
+  background-size: 20px 20px;
+}
+
+/* —— Animated —— */
+.progress[data-animated] .progress_fill {
+  animation: progress-stripes 1s linear infinite;
+}
+@keyframes progress-stripes {
+  0% { background-position: 20px 0; }
+  100% { background-position: 0 0; }
+}
